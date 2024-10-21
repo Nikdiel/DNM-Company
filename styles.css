@@ -1,0 +1,661 @@
+
+body{
+    background-color: black;
+    color: white;
+    margin: 0;
+    
+}
+
+
+
+header{
+    position: relative;
+    top: -1px;
+    z-index: 3;
+    height: 50px;
+    display: flex;
+    justify-content: right;
+    background-color: rgb(0, 0, 0);
+    min-width:900px;
+    margin: 0%;
+    padding: 0%;
+    animation-name: header;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
+}
+
+/*Анимация появления хэдера*/
+
+@keyframes header{
+    0%{
+        opacity: 0%;
+    }
+}
+
+
+header a{
+    text-decoration: none;
+}
+   
+/*header>a>img{ 
+    margin-top: 25px;
+    margin-left: 5%;
+    height: 50px;
+    width: 300px;
+}*/
+
+div.navigation{
+    display: flex;
+}
+
+/*Поисковая строка*/
+
+input{
+    height:25px;
+    width: 150px;
+    border: 1px solid;
+    border-radius: 20px;
+    position: relative;
+    top: 15px;
+    left:40px;
+    background-image: url(https://dielnik.ucoz.net/img/search.png);
+    background-position: 120px;
+    background-size: 15px;
+    background-repeat: no-repeat;
+    padding-left: 10px;
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+	-webkit-appearance:none;
+}
+nav{
+    position: relative;
+    justify-content: right;
+}
+nav ul{
+    display: flex;
+}
+nav ul a{
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+}
+nav ul li{
+    list-style: none;
+    font-size: 30px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+}
+nav>ul>li>a{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    bottom: 37px;
+}
+    
+nav ul li ul{
+    padding: 0;
+    display: none;
+    background-color: black;
+    position: absolute;
+    right: 0;
+    top:59px;
+    width: 150px;
+}
+nav ul li ul li{
+    border: 1px solid rgba(225, 225, 225, .2);
+    width: 100%;
+    margin: 0;
+    font-size: 30px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav ul li:hover>ul{
+    display: initial;
+    animation-name: menu;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    border-radius: 0 0 0 10px;
+}
+
+/*Анимация плавного появления выподающего меню*/
+
+@keyframes menu{
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+
+/*Контент*/
+
+main{
+    margin: 0;
+    height: 100%;
+    display: grid;  
+}
+
+/*Первая секция*/
+
+.s1{
+    background: linear-gradient(to top, black, transparent), url(img/Home.png);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 870px;
+    margin-top: 0;
+    
+}
+
+/*Анимация появления лого*/
+
+@keyframes logo{
+    0%{
+        op: 0%;
+        opacity: 0%;
+    }
+    100%{
+        op: 5%;
+        opacity: 100%;
+    }
+}
+
+.s1>h1:first-child{
+    height: 100px;
+    width: 100px;
+    position: relative;
+    left: 10%;
+    top: 5%;
+    animation-name: logo;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+}
+
+
+.s1 div{
+    height: 40%;
+    width: 48%;
+    position: relative;
+    top: 20%;
+    left: 10%;
+    overflow: hidden;
+}
+/*Анимация появления текста в первой секции под лого*/
+
+@keyframes text{
+    0%{
+        left: -50%;
+        opacity: 0%;
+    }
+    100%{
+        left: 0%;
+        opacity: 100%;
+    }
+}
+
+.l{
+    height: 100px;
+    width: 100px;
+    position: relative;
+    font-weight: 800;
+    margin-bottom: 80px;
+    animation-name: text;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+.s1 p {
+    font-size: 5em;
+    animation-name: text;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Oswald:wght@200..700&display=swap');
+.s1 h1 {
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  /*Вторая секция*/
+
+.s2{
+    margin-top: 50px;
+}
+
+.h1B{
+    font-size: 3em;
+    text-align: center;
+    margin: 0%;
+    font-family: Microsoft Sans Serif;
+    position: relative;
+    top: 0%;
+}
+
+.h1Animation{
+    animation: h1-a 1s 1;
+}
+
+@keyframes h1-a {
+    0% {
+        top: 70px;
+    }
+    100% {
+        top: 0px;
+    }
+}
+
+.hrB{
+    width: 20%;
+    margin: 50px 40%;
+}
+
+/*Класс который создается при появлении элемента в зоне видимости*/
+
+.hrAnimation{
+    animation: hr-a 1s 1;
+}
+
+/*Анимация появления с помощью вытягивания*/
+
+@keyframes hr-a {
+    0% {
+        transform: scale(0, 1)
+    }
+    100% {
+        transform: scale(1, 1)
+    }
+}
+
+div.text_obsh{
+    display: flex;
+    justify-content: center;
+}
+
+div.text31{
+    max-width: 24%;
+    margin: 2% 3%;
+    border: 4px solid #1d1d1d;
+    border-radius: 15px;
+    background: radial-gradient(black, #141414);
+    padding: 20px;
+    color: rgb(251, 251, 251);
+    font-family: 'Courier New', Courier, monospace;
+    animation-delay: 0ms;
+}
+div.text32{
+    max-width: 24%;
+    margin: 2% 3%;
+    border: 4px solid #1d1d1d;
+    border-radius: 15px;
+    background: radial-gradient(black, #141414);
+    padding: 20px;
+    color: rgb(251, 251, 251);
+    font-family: 'Courier New', Courier, monospace;
+    animation-delay: 0.3s;
+    animation-fill-mode: backwards;
+}
+div.text33{
+    max-width: 24%;
+    margin: 2% 3%;
+    border: 4px solid #1d1d1d;
+    border-radius: 15px;
+    background: radial-gradient(black, #141414);
+    padding: 20px;
+    color: rgb(251, 251, 251);
+    font-family: 'Courier New', Courier, monospace;
+    animation-delay: 0.6s;
+    animation-fill-mode: backwards;
+}
+
+/*Класс который создается при появлении элемента в зоне видимости*/
+
+.square-animation {
+    animation: wipe-enter 2s 1;
+}
+
+/*Анимация появления с помощью расширения*/
+
+@keyframes wipe-enter {
+    0% {
+        transform: scale(1, 0)
+    }
+    80% {
+        transform: scale(1, 0)
+    }
+}
+
+.text31 h1, .text32 h1, .text33 h1{
+    font-size: 2em;
+    text-align: center;
+}
+.text31 p, .text32 p, .text33 p{
+    padding: 20px;
+    color: #e1e1e1;
+}
+
+
+
+
+/*Секция с профилем компании*/
+
+.s3{
+    background: linear-gradient(#000000, #141414 20%);
+    height: 800px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #141414;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 0;
+}
+
+.s3>img{
+    height: 60%;
+    width: 45%;
+    max-width: 700px;
+    margin-left: 100px;
+}
+
+.s3>div{
+    max-width: 650px;
+    min-width: auto;
+    margin: 0 60px;
+}
+
+.h1Profile{
+    height: 55px;
+    width: 572px;
+    position: relative;
+    overflow-y: hidden;
+    max-width: 90%;
+    margin-top: 0;
+    font-size: 3em;
+    font-family: Microsoft Sans Serif;
+}
+
+.pan{
+    max-width: 90%;
+    font-size: 1.5em;
+    font-family: Microsoft Sans Serif;
+    max-width: 90%;
+}
+
+.textAnimation{
+    animation: text 2s 1;
+}
+
+.btn1{
+    margin-top: 30px;
+    height: 50px;
+    width: 200px;
+    border: 0;
+    border-radius: 25px;
+    font-size: 1em;
+    font-family: Microsoft Sans Serif;
+    color: white;
+    background-color: rgb(125, 125, 125);
+    animation: menu 1s 1;
+}
+
+.btnAnimation{
+    animation: menu 2s 1;
+}
+
+/*Секция с услугами*/
+
+.service_company{
+    height: 800px;
+    background-color: #141414;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 90%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 100px;
+}
+
+.service_company>div:first-child{
+    max-width: 530px;
+    margin-right: 100px;
+}
+
+.service_company>div>div.pani>h1:first-child{
+    position: relative;
+    font-size: 3em;
+    font-family: Microsoft Sans Serif;
+}
+.service_company>div>img{
+    height: 300px;
+    width: 530px;
+}
+
+.service_company>div:last-child{
+    width:600px;
+    margin-left: 50px;
+    position: relative;
+    top: 5%;
+    max-width: 2000px;
+}
+
+.number {
+    display: flex;
+    margin-right: 60px;
+    margin-bottom: 30px;
+}
+
+.number>h1{
+    margin-right: 10%;
+    font-size: 2em;
+    font-family: arial black;
+    transform: translateY(30%);
+}
+
+div.service{
+    width: 500px;
+}
+
+.service>div>h2{
+    font-size: 2em;
+    font-family: Microsoft Sans Serif;
+    width: 500px;
+    margin-bottom: 0;
+    position: relative;
+}
+.service>p{
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    width: 500px;
+}
+
+/*Наша команда*/
+
+.team{
+    height: 1000px;
+    background: linear-gradient(#141414, white 80%);
+    color: rgb(234, 234, 234);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team>div>div:first-child{
+    margin-left: 2.7%;
+    display: block;
+}
+
+.team>div>div>h1{
+    font-size: 3em;
+    font-family: Microsoft Sans Serif;
+    position: relative;
+}
+
+.team>div>div{
+    display: flex;
+    justify-content: center;
+
+}
+
+.team>div>div>div{
+    width: 400px;
+    margin: 0 40px;
+    background-color: #141414;
+    color: white;
+}
+
+.team>div>div>div img{
+    height: 267px;
+    width: 400px;
+}
+
+.team>div>div div h1{
+    font-size: 2em;
+    font-family: Microsoft Sans Serif;
+    margin-left: 5%;
+    position: relative;
+}
+
+.team>div>div div p{
+    font-size: 1em;
+    max-width: 350px;
+    font-family:'Courier New', Courier, monospace;
+    margin-left: 5%;
+    position: relative;
+}
+
+/*Секция с отзывами*/
+
+.so{
+    height: 800px;
+    display: inline;
+    line-height: normal;
+    vertical-align: middle;
+    color: gray;
+    background-color: #fff;
+}
+
+.otz{
+    text-align: center;
+    font-size: 3em;
+    margin-top: 100px;
+    font-family: Microsoft Sans Serif;
+    position: relative;
+}
+
+.hrC{
+    width: 20%;
+    margin: 50px 40%;
+}
+
+.otzivy{
+    display: flex;
+    overflow-x: scroll;
+    height: 380px;
+    width: 1100px;
+    margin: 50px 0;
+    margin-inline: auto;
+    border: 0px solid gray;
+    border-radius: 6px 6px 6px 6px;
+    padding: 40px 10px;
+    padding-right: 0;
+    background-color: #292929;
+    color: rgb(255, 255, 255);
+}
+
+.otzivy::-webkit-scrollbar {
+    height: 10px;
+}
+
+.otzivy::-webkit-scrollbar-track {
+    -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+    background-color: #4b4b4b;
+    border-radius: 10px;
+}
+  
+.otzivy::-webkit-scrollbar-thumb {
+    border: 1px solid gray;
+    border-radius: 10px;
+    background: linear-gradient(180deg, lightgrey, gray);
+}
+.otzivy>div{
+    min-width: 240px;
+    margin-right: 15px;
+    margin-left: 15px;
+    padding-right: 10px;    
+}
+.otzivy div img{
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+    border-radius: 30px;
+}
+.user_star{
+    display: flex;
+    justify-content: space-between;
+}
+.user_star p{
+    position: relative;
+    right: 30%;
+}
+
+.otzivy>div>h1{
+    font-family: Microsoft Sans Serif;
+    font-size: 20px;
+}
+
+.otzivy>div>p{
+    max-width: 300px;
+    font-family:'Courier New', Courier, monospace ;
+}
+
+
+/*Footer*/
+
+footer{
+    height: 30px; 
+    display: flex;
+    justify-content: space-between;
+    background-color: #232323;
+    border-top: 1px solid #141414;
+    padding: 1% 2%;
+}
+div.social_media{
+    height: 30px;
+    width: 150px;
+    margin-top: 10px;
+    
+}
+div.social_media img{
+    margin-left: 2%;
+    transform: translateY(-30%);
+}
+footer p{
+    color: white;
+    position: relative;
+    transform: translateY(-50%);
+}
+
+.h1an{
+    height: auto; 
+    overflow-y: hidden; 
+    margin-bottom: 50px;
+}
+.pani{
+    overflow: hidden;
+}
